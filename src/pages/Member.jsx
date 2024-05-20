@@ -456,7 +456,7 @@ const Member = (props) => {
      //      if (!user) return; // Ensure user is defined
 
      //      const fetchMembers = async () => {
-     //           const response = await fetch('https://coop-back-zqr6.onrender.com/api/member/', {
+     //           const response = await fetch('https://generic-coop-backend.onrender.com/api/member/', {
      //                headers: {
      //                     'Authorization': `Bearer ${user.token}`
      //                }
@@ -507,7 +507,7 @@ const Member = (props) => {
           if (!user) return; // Ensure user is defined
 
           const fetchMembers = async () => {
-               const response = await fetch('https://coop-back-zqr6.onrender.com/api/member/', {
+               const response = await fetch('https://generic-coop-backend.onrender.com/api/member/', {
                     headers: {
                          'Authorization': `Bearer ${user.token}`
                     }
@@ -542,9 +542,9 @@ const Member = (props) => {
                let url;
                // if (user.username.substring(0, 5) !== "hhhc." ? '2' : '1') {
                if (user.username.substring(0, 5) !== "hhhc.") {
-                    url = `https://coop-back-zqr6.onrender.com/api/savings/${user.username}`;
+                    url = `https://generic-coop-backend.onrender.com/api/savings/${user.username}`;
                } else {
-                    url = `https://coop-back-zqr6.onrender.com/api/savings/${member_id}`;
+                    url = `https://generic-coop-backend.onrender.com/api/savings/${member_id}`;
                }
 
                const response = await fetch(url, {
@@ -553,7 +553,7 @@ const Member = (props) => {
                     }
                })
 
-               // const response = await fetch('https://coop-back-zqr6.onrender.com/api/savings/' + member_id, {
+               // const response = await fetch('https://generic-coop-backend.onrender.com/api/savings/' + member_id, {
                //      headers: {
                //           'Authorization': `Bearer ${user.token}`
                //      }
@@ -623,7 +623,7 @@ const Member = (props) => {
      useEffect(() => {
           if (user && user.username.substring(0, 5) === "hhhc.") {
                const fetchSavings = async () => {
-                    const response = await fetch('https://coop-back-zqr6.onrender.com/api/savings/', {
+                    const response = await fetch('https://generic-coop-backend.onrender.com/api/savings/', {
                          headers: {
                               'Authorization': `Bearer ${user.token}`
                          }
@@ -1308,7 +1308,7 @@ const Member = (props) => {
           }
 
           else {
-               const response = await fetch('https://coop-back-zqr6.onrender.com/api/member/', {
+               const response = await fetch('https://generic-coop-backend.onrender.com/api/member/', {
                     method: 'POST',
                     body: JSON.stringify(member),
                     headers: {
@@ -1435,7 +1435,7 @@ const Member = (props) => {
                handleErrorToast('Fill up the required fields completely ')
           }
           else {
-               const response = await fetch('https://coop-back-zqr6.onrender.com/api/member/' + id, {
+               const response = await fetch('https://generic-coop-backend.onrender.com/api/member/' + id, {
                     method: 'PATCH',
                     body: JSON.stringify(member),
                     headers: {
@@ -1507,7 +1507,7 @@ const Member = (props) => {
                console.log('You must be logged in first')
                return
           } else {
-               const response = await fetch('https://coop-back-zqr6.onrender.com/api/member/' + id, {
+               const response = await fetch('https://generic-coop-backend.onrender.com/api/member/' + id, {
                     method: 'DELETE',
                     headers: {
                          'Authorization': `Bearer ${user.token}`
@@ -1592,7 +1592,7 @@ const Member = (props) => {
                handleErrorToast('Fill up the required fields completely ')
           }
           else {
-               const response = await fetch('https://coop-back-zqr6.onrender.com/api/savings/', {
+               const response = await fetch('https://generic-coop-backend.onrender.com/api/savings/', {
                     method: 'POST',
                     body: JSON.stringify(savings),
                     headers: {
@@ -1623,7 +1623,7 @@ const Member = (props) => {
 
 
 
-               const response = await fetch('https://coop-back-zqr6.onrender.com/api/savings/' + savingsid, {
+               const response = await fetch('https://generic-coop-backend.onrender.com/api/savings/' + savingsid, {
                     method: 'DELETE',
                     headers: {
                          'Authorization': `Bearer ${user.token}`
@@ -1703,7 +1703,7 @@ const Member = (props) => {
                handleErrorToast('Fill up the required fields completely')
           }
           else {
-               const response = await fetch('https://coop-back-zqr6.onrender.com/api/savings/' + savingsid, {
+               const response = await fetch('https://generic-coop-backend.onrender.com/api/savings/' + savingsid, {
                     method: 'PATCH',
                     body: JSON.stringify(savings),
                     headers: {
